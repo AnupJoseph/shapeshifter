@@ -3,6 +3,7 @@ from xml.dom import minidom
 import re
 
 # External
+import numpy as np
 
 # Project
 
@@ -16,4 +17,4 @@ def grab_points(infile: str):
     matches = re.findall(pattern, path_strings[0])
     svgpath = matches[0].replace("Q ", "").replace(" L", "")
     svgpath = [[float(j) for j in i.split(",")] for i in svgpath.split()]
-    return svgpath
+    return np.array(svgpath)

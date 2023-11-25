@@ -182,6 +182,6 @@ def rdp(M, epsilon=0, dist=pldist, algo="iter", return_mask=False):
     return algo(np.array(M), epsilon, dist).tolist()
 
 
-arr = np.array([1, 1, 2, 2, 3, 3, 4, 4]).reshape(4, 2)
-mask = rdp(arr, algo="iter", return_mask=True)
-print(arr[mask])
+# arr = np.array([1, 1, 2, 2, 3, 3, 4, 4]).reshape(4, 2)
+# mask = rdp(arr, algo="iter", return_mask=True)
+# print(arr[mask])
